@@ -43,7 +43,7 @@ const login = async (req, res) => {
         throw new UnauthenticatedError('Invalid Password');
     }
 
-    // Getting the token for the user who provided its credential
+    // Getting the token for the user who provided its credentials
     const token = user.createJWT();
     res.status(StatusCodes.OK).json({
         user: {
